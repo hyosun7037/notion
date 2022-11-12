@@ -20,9 +20,6 @@ body {
   margin: 0;
 }
 
-.blue{
-  background-color: #1b64da;
-}
 
 .vertical{
 }
@@ -4479,7 +4476,8 @@ body {
 }
 .yellow.yellow,
 .prev-.yellow.yellow {
-  background: #dadada;
+  /* background: #dadada; */
+  background: #003b8f;
   transition: all 0.2s ease-in-out;
 }
 .yellow #calendar,
