@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - easylogic-colorpicker demo</title>
+  <link rel='stylesheet' href='https://raw.githack.com/easylogic/colorpicker/main/dist/EasyLogicColorPicker.css'><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./color-picker.css">
+ 
+</head>
+<body style="margin: 0 auto;">
+<main>
+  <!-- <div>색을 선택하고, 글을 입력해주세요!</div> -->
+  <div class="wrap">
+    <div class="body" >
+      <div id="color_picker"></div>
+      <p class="sample" style="display: none;">
+        <i class="sample__color"></i>
+        <em class="sample__code"></em>
+      </p>
+      
+      <!-- <button class="copy-color" role="button" style="width: 100%;">Copy Color</button> -->
+    </div>
+    
+    <!--  -->
+    <!-- 모양변경 -->
+    <!-- <nav class="controller">
+      <label>
+        <span>Type: </span>
+        <select onchange="onChangeType(this)">
+          <option value="default" selected>default</option>
+          <option value="circle">circle</option>
+          <option value="mini">mini</option>
+          <option value="ring">ring</option>
+          <option value="none">none</option>
+        </select>
+      </label>
+    </nav> -->
+  </div>
+  <div>
+    <div>
+      <input style="height: 45px;" class="inputText" placeholder="글자를 입력해주세요"/>
+      <!-- <button class="copy-color" role="button" >입력</button> -->
+    </div>
+    <div class="copyButton">
+      <button class="copy-color" onclick="copy('text')">글자색복사</button>
+    </div>
+    </div>
+</main>
+
+  <script src='https://raw.githack.com/easylogic/colorpicker/main/dist/EasyLogicColorPicker.js'>
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
