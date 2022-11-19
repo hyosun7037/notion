@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "ant-design-vue": "^3.2.15",
-    "sass": "^1.56.1"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.2.4"
-  }
-}
