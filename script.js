@@ -33,7 +33,6 @@ async function copy(colorType)  {
     const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}`;
     console.log(colorTextChangeResult);
     // navigator.clipboard.writeText(colorTextChangeResult);
-    
   }
 }
 
