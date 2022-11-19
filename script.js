@@ -26,12 +26,18 @@ function onChangeType(e) {
   picker.setType(e.value);
 }
 
-function copy(colorType){
+async function copy(colorType)  {
+  const queryOpts = { name: 'clipboard-read', allowWithoutGesture: true};
+  const permissionStatus = await navigator.permissions.query(queryOpts);
+  permissionStatus.onChange = () => {
+    console.log(permissionStatus)
+  }
   const colorValue = document.querySelector('.sample__code').innerText;
   const textValue = document.querySelector('.inputText').value;
   if(colorType == 'text'){
     const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}`;
     navigator.clipboard.writeText(colorTextChangeResult);
+    
   }
 }
 
