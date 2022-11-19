@@ -9,8 +9,29 @@
 </head>
 <body style="margin: 0 auto;">
 <main>
-  <iframe src="color-picker-origin.html" allow="clipboard-read; clipboard-write" height="600px">
-  </iframe>
+  <!-- <div>색을 선택하고, 글을 입력해주세요!</div> -->
+  <div class="wrap">
+    <div class="body" >
+      <div id="color_picker"></div>
+          <p class="sample" style="display: none;">
+            <i class="sample__color"></i>
+            <em class="sample__code"></em>
+          </p>
+      </div>
+  </div>
+  <div>
+    
+    <div>
+      <input style="height: 45px;" class="inputText" placeholder="글자를 입력해주세요"/>
+    </div>
+    <div class="copyButton">
+      <button class="copy-color" onclick="copy('text')">글자색복사</button>
+    </div>
+  </div>
+</main>
+  <script src='https://raw.githack.com/easylogic/colorpicker/main/dist/EasyLogicColorPicker.js'>
+  </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
