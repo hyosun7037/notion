@@ -31,7 +31,6 @@ async function copy(colorType)  {
   const textValue = document.querySelector('.inputText').value;
   if(colorType == 'text'){
     const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}`;
-    document.querySelector('.colorResult').innerHTML = colorTextChangeResult;
     console.log(colorTextChangeResult);
     navigator.clipboard.writeText(colorTextChangeResult);
   }
