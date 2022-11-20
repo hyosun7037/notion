@@ -26,19 +26,19 @@ function onChangeType(e) {
   picker.setType(e.value);
 }
 
-async function copy(colorType)  {
+ function copyText()  {
   const colorValue = document.querySelector('.sample__code').innerText;
-  const textValue = document.querySelector('.inputText').value;
-  if(colorType == 'text'){
+  const textValue = document.querySelector('.input-text').value;
     const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}`;
+    console.log(colorValue);
+    console.log(textValue);
     const el = document.createElement("textarea");
     el.value = colorTextChangeResult;
     document.body.appendChild(el);
     el.select();
     document.execCommand("copy");
     document.body.removeChild(el);
-    console.log(colorTextChangeResult);
-  }
+    
 }
 
 window.onload = function() {
