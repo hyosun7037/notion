@@ -37,7 +37,6 @@ async function copy(colorType)  {
     el.select();
     document.execCommand("copy");
     document.body.removeChild(el);
-    // await navigator.clipboard.writeText(colorTextChangeResult);
     console.log(colorTextChangeResult);
   }
 }

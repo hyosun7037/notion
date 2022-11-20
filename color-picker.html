@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>colorPicker</title>
-  <link rel='stylesheet' href='https://raw.githack.com/easylogic/colorpicker/main/dist/EasyLogicColorPicker.css'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://raw.githack.com/easylogic/colorpicker/main/dist/EasyLogicColorPicker.css'>
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./color-picker.css">
  
 </head>
 <body style="margin: 0 auto;">
-  <iframe src="./color-picker-origin.html" height="530px" style="border: none;"></iframe>
+<main>
+  <div class="wrap">
+    <div class="body" >
+        <div id="color_picker"></div>
+            <p class="sample" style="display: none;">
+              <i class="sample__color"></i>
+              <em class="sample__code"></em>
+            </p>
+        </div>
+    </div>
+  <div>
+      <input class="input-text" placeholder="글자를 입력해주세요"/>
+      <div class="copy-button">
+        <button class="copy-color" onclick="copy('text')">글자색복사</button>
+      </div>
+      <em class="made-by-text">made by @notionnammae</em>
+  </div>
+</main>
+  <script src='https://raw.githack.com/easylogic/colorpicker/main/dist/EasyLogicColorPicker.js'>
+  </script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
