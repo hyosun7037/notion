@@ -9,12 +9,12 @@ const defaults = {
   swatchColors: ['#E9ACAC', '#D86C6C', '#B73232', '#AD0707', '#611B1B'],
 };
 
-const initPicker = (options) => {
-   options = Object.assign(defaults, options);
-   picker = new EasyLogicColorPicker(options);
-};
+function initPicker(options) {
+  options = Object.assign(defaults, options);
+  picker = new EasyLogicColorPicker(options);
+}
 
-const updateColor = (color) => {
+function updateColor(value) {
   color = value;
   const $color = document.querySelector('.sample__color');
   const $code = document.querySelector('.sample__code');
@@ -22,11 +22,11 @@ const updateColor = (color) => {
   $color.style.setProperty('--color', color);
 }
 
-const onChangeType = (e) => {
+function onChangeType(e) {
   picker.setType(e.value);
 }
 
-const copyText = () => {
+ function copyText()  {
   const colorValue = document.querySelector('.sample__code').innerText;
   const textValue = document.querySelector('.input-text').value;
     const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}`;
@@ -38,9 +38,11 @@ const copyText = () => {
     el.select();
     document.execCommand("copy");
     document.body.removeChild(el);
+    
 }
 
-window.onload = () => {
+window.onload = function() {
   initPicker();
   updateColor(color);
-}
+};
+
