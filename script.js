@@ -37,12 +37,19 @@ function onChangeType(e) {
     document.body.appendChild(el);
     el.select();
     document.execCommand("copy");
-    document.body.removeChild(el);
-    
+    document.body.removeChild(el);    
 }
+
+function blindOpacity(){
+  const opacity = document.querySelector('.el-cp-slider--alpha');
+  opacity.style.display = 'none';
+  console.log(opacity.style.display);
+}
+
 
 window.onload = function() {
   initPicker();
   updateColor(color);
+  blindOpacity();
 };
 
