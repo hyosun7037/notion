@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <!-- <iframe src="./audio/noflix.mp3" allow="autoplay" id="audio" ></iframe> -->
+    <video src="./audio/noflix.mp3" autoplay="autoplay" controls muted="muted" id="audio"></video>
+    <!-- <video id="audio" autoplay>
+        <source src="./audio/noflix.mp3">
+    </video> -->
+    </body>
+</html>
+
+<script>
+    var audio = document.getElementById("audio");
+    audio.play();
+
+    const disabledMute = document.getElementById("audio").muted = false;
+</script>
