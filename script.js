@@ -33,9 +33,9 @@ function onChangeType(e) {
   const colorValue = document.querySelector('.sample__code').innerText;
   console.log(colorValue)
   const textValue = document.querySelector('.input-text').value;
-  const colorTextChangeResult = `\\color{${colorValue}}\\Huge{${textValue}}`;
-  // const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}\\Huge`;
-    const bgValue = document.querySelector('.sample__code').innerText;
+  // const colorTextChangeResult = `\\color{${colorValue}}\\Huge{${textValue}}`;
+  const colorTextChangeResult = `\\color{${colorValue}}\\textsf{${textValue}}`;
+    // const bgValue = document.querySelector('.sample__code').innerText;
     // const colorTextAndBgChangeResult = `\\color{${colorValue}}\\colorbox{${bgValue}}{${textValue}}`
     const el = document.createElement("textarea");
     el.value = colorTextChangeResult;
