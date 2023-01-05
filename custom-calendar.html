@@ -140,7 +140,7 @@
             var singleDay = document.createElement("div");
             singleDay.className = "day";
             singleDay.dataset.title = "";
-            singleDay.dataset.location = "";
+            // singleDay.dataset.location = "";
             //Parse Day
             if (allDays[i] !== " ") {
             var dayOTW = allDays[i].split(" ")[2];
@@ -155,16 +155,16 @@
         }
         var allOfDays = document.querySelectorAll("#days .day");
         var dayArray = [];
-        for (var i = 0; i < allOfDays.length; i++) {
-            if (i === 6 || i === 13 || i === 20 || i === 27 || i === 34) {
-            // dayArray.push(i);
-            // console.log(allOfDays[i]);
-            allOfDays[i].outerHTML +=
-                '<div class="day-details"><div id="input-arrow"></div><div class="input"></div></div>';
-            }
-        }
-        document.getElementById(id).innerHTML +=
-            '<div class="day-details"><div id="input-arrow"></div><div class="input"></div><div style="clear:both"></div>';
+        // for (var i = 0; i < allOfDays.length; i++) {
+        //     if (i === 6 || i === 13 || i === 20 || i === 27 || i === 34) {
+        //     // dayArray.push(i);
+        //     // console.log(allOfDays[i]);
+        //     allOfDays[i].outerHTML +=
+        //         '<div class="day-details"><div id="input-arrow"></div><div class="input"></div></div>';
+        //     }
+        // }
+        // document.getElementById(id).innerHTML +=
+        //     '<div class="day-details"><div id="input-arrow"></div><div class="input"></div><div style="clear:both"></div>';
         }
         //Thanks: http://stackoverflow.com/questions/4649699/is-it-possible-to-get-elements-numerical-index-in-its-parent-node-without-loopi
         function whichChild(elem) {
@@ -220,11 +220,11 @@
             addElements(11, "days");
             }
         }
-        if (e.target.id === "color-picker") {
-            document.querySelector("#dates.show").className = "hide";
-            document.getElementById("colors").className = "show";
-            e.target.className = "hide";
-        }
+        // if (e.target.id === "color-picker") {
+        //     document.querySelector("#dates.show").className = "hide";
+        //     document.getElementById("colors").className = "show";
+        //     e.target.className = "hide";
+        // }
         if (e.target.id === "back") {
             document.getElementById("color-picker").className = document
             .getElementById("color-picker")
@@ -310,17 +310,17 @@
             click += 1;
             setTimeout(function () {
             if (click > 1) {
-                document.querySelector(".day-details.expanded .input").outerHTML =
-                '<input type="text" value="' +
-                document.querySelector(".day-details.expanded .input a").innerHTML +
-                '"/>';
-                document.querySelector(".day-details.expanded input").focus();
-                document
-                .querySelector(".day-details.expanded input")
-                .setSelectionRange(
-                    document.querySelector(".day-details.expanded input").value.length,
-                    document.querySelector(".day-details.expanded input").value.length
-                );
+                // document.querySelector(".day-details.expanded .input").outerHTML =
+                // '<input type="text" value="' +
+                // document.querySelector(".day-details.expanded .input a").innerHTML +
+                // '"/>';
+                // document.querySelector(".day-details.expanded input").focus();
+                // document
+                // .querySelector(".day-details.expanded input")
+                // .setSelectionRange(
+                //     document.querySelector(".day-details.expanded input").value.length,
+                //     document.querySelector(".day-details.expanded input").value.length
+                // );
             } else if (click === 1) {
                 document.getElementById(
                 "color-picker"
@@ -421,8 +421,8 @@
                 .querySelector(".day.expanded")
                 .className.replace(/ has-event/gi, "");
             }
-            document.querySelector(".day-details.expanded input").outerHTML =
-                '<div class="input"></div>';
+            // document.querySelector(".day-details.expanded input").outerHTML =
+            //     '<div class="input"></div>';
             }
             click = 0;
         }
