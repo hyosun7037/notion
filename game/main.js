@@ -42,6 +42,7 @@ obstacle.draw();
 
 var timer = 0;
 var obstacles = [];
+var jumpTimer = 0;
 
 // 1초에 60번 실행
 function frameByFrame(){
@@ -59,10 +60,41 @@ function frameByFrame(){
     
     // 장애물 움직이기
     for(var i = 0; i < obstacles.length; i++){
+        // x좌표가 0미만이면 제거 
+        if(obstacles[i].x < 0){
+            obstacles.splice(i, 1)};
         obstacles[i].x -= 5;
         obstacles[i].draw();
+    }
+    // character y축으로 점프
+    if(jump){
+        character.y--;
+        jumpTimer++;
+    }  
+    // 점프가 끝나면 다시 원래대로
+    else{
+        character.y++;
+        jumpTimer = 0;
+        // 200 이하로 내려가면 멈춤
+        if(character.y > 200){
+            character.y = 200;
+        }
+    }
+    if(jumpTimer > 100){
+        jump = false;
+        
     }
     character.draw();
 }
 
 frameByFrame();
+
+
+
+var jump = false;
+// spacebar 누르면 실행
+document.addEventListener('keydown', function(e){
+    if(e.code === 'Space'){
+        jump = true;
+    }
+});
